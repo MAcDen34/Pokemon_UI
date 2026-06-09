@@ -19,11 +19,10 @@ async function fetchPokemon() {
         card.innerHTML = `
             <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
             <h2>${pokemon.name}</h2>
-            <h3>${pokemon.id}</h3>
-            <h3>${pokemon.height}</h3>
-            <h3>${pokemon.weight}</h3>
-            <h3>${pokemon.types[0].type.name}</h3>
-            <h3>${pokemon.abilities[0].ability.name}</h3>
+            <p>Height: ${pokemon.height}</p>
+            <p>Weight: ${pokemon.weight}</p>
+            <p>Type: ${pokemon.types[0].type.name}</p>
+            <p>Ability: ${pokemon.abilities[0].ability.name}</p>
             <button class="view-details" onclick="window.location.href='details.html?id=${pokemon.id}'">View Details</button>
         `;
         container.appendChild(card);
